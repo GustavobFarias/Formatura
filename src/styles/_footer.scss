@@ -1,0 +1,14 @@
+@use "variaveis";
+
+.footer {
+    padding-top: 50px;
+    background-image: linear-gradient(variaveis.$CorDeFundo1, variaveis.$corDeFundo2);
+
+    p {
+        text-align: center;
+
+        @media (max-width: 640px) {
+            font-size: 14px;
+        }
+    }
+}

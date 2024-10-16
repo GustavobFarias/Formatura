@@ -1,0 +1,112 @@
+@use "variaveis";
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../images/formando.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 64px;
+    height: 90vh;
+    position: relative;
+
+    &__title {
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 54px;
+
+        @media (max-width: 640px) {
+            font-size: 32px;
+        }
+    }
+
+    .container {
+        .title {
+            max-width: 98%;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 800;
+            
+
+            #contador {
+                display: block;
+            }
+
+            @media (max-width: 640px) {
+                font-size: 26px;
+            }
+        }
+    }
+
+    &__container {
+        
+        &__content {
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+
+            @media (max-width: 640px) {
+                display: block;
+            }
+        }
+    }
+
+    &__content {
+        font-size: 40px;
+        line-height: 20px;
+        font-weight: 800;
+        
+
+        &__item {
+            max-width: 800px;
+            background-color: variaveis.$CorDoTexto;
+            padding: 16px;
+            margin-top: 82px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 20px 5px variaveis.$CorDaShadow;
+
+            @media (max-width: 640px) {
+                max-width: 90%;
+                margin-left: 20px;
+            }
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            font-size: 14px;
+
+            @media (max-width: 640px) {
+                max-width: 300px;
+                display: block;
+
+            }
+
+            &__item {
+                margin: 0 32px;
+
+                h3 {
+                    color: variaveis.$corDeFundo2;
+                    font-weight: 800;
+                }
+
+                p {
+                    color: variaveis.$CorDoTexto3;
+                    font-style: italic;
+                }
+
+                @media (max-width: 640px) {
+                    display: flex;
+                    margin: 0;
+
+                    p {
+                        max-width: 100%;
+                        margin-left: 8px;
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

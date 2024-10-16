@@ -1,0 +1,78 @@
+@use "variaveis";
+
+.event {
+    overflow: hidden;
+    
+    &__formatura {
+        padding: 62px;
+        background-image: linear-gradient(variaveis.$CorDeFundo1, variaveis.$corDeFundo2);
+
+        @media (max-width: 640px) {
+            padding: 62px 16px;
+        }
+    }
+
+    &__festa {
+        padding: 62px;
+        background-image: linear-gradient(variaveis.$corDeFundo2, variaveis.$CorDeFundo1);
+
+        @media (max-width: 640px) {
+            padding: 62px 16px;
+        }
+    }
+
+    &--image-left {
+        .container {
+            &__content {
+                flex-direction: row-reverse;
+            }
+            
+        }
+    }
+    
+    .container {
+        &__content {
+            display: flex;
+
+            &__item {
+                .sub-title {
+                    margin-bottom: 32px;
+                }
+            }
+    
+            img {
+                height: 200px;
+                margin-right: 32px;
+                border-radius: 8px;
+            }
+
+            p {
+                margin-right: 18px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            &__content {
+                display: block;
+
+                &__item {
+                    .sub-title {
+                        margin-bottom: 18px;
+                        text-align: center;
+                    }
+                }
+
+                img {
+                    height: 200px;
+                    width: 100%;
+                    margin-bottom: 48px;
+                }
+
+                p {
+                    font-size: 18px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
